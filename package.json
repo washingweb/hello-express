@@ -4,7 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "dev": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "build-docker": "docker build -t registry.cn-shenzhen.aliyuncs.com/washingweb/hello-express:latest .",
+    "push-docker": "docker push registry.cn-shenzhen.aliyuncs.com/washingweb/hello-express:latest"
   },
   "repository": {
     "type": "git",
@@ -18,5 +21,8 @@
   "homepage": "https://github.com/washingweb/hello-express#readme",
   "dependencies": {
     "express": "^4.15.2"
+  },
+  "devDependencies": {
+    "nodemon": "^1.11.0"
   }
 }
