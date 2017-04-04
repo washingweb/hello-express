@@ -1,9 +1,12 @@
-FROM node
+FROM node:7.6-onbuild
 MAINTAINER washingweb@hotmail.com
+
+ADD package.json .
+RUN npm install
 
 WORKDIR root
 ADD index.js .
-ADD package.json .
 
-RUN npm install
+EXPOSE 80
+
 CMD node index.js
